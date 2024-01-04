@@ -7,4 +7,4 @@ assignees: ''
 
 ---
 
-As a "role", I can "capability" so that I can "results".
+As a **"role"**, I can **"capability"** so that I can **"results"**.
