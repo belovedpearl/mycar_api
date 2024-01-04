@@ -8,7 +8,7 @@ class Profile(models.Model):
     Profiles Model
     Holds the profile information of users
     Ensures profiles are ordered with creation in descending order
-    Returns string containing user's profile picture
+    Returns string containing user's username
     """
 
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -27,7 +27,7 @@ class Profile(models.Model):
         ordering = ['-created_at']
 
     def __str__(self):
-        return f"{self.owner}'s profile picture"
+        return f"{self.owner}"
 
 def create_profile(sender, instance, created, **kwargs):
     """
