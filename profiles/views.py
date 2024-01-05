@@ -16,6 +16,7 @@ class ProfileList(generics.ListAPIView):
 class ProfileDetail(generics.RetrieveUpdateAPIView):
     """
     Retrieve or update a profile
+    Allows update of the profile
     """
     serializer_class = ProfileSerializer
     queryset = Profile.objects.all()
