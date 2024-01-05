@@ -1,7 +1,7 @@
 from rest_framework import generics
 from profiles.models import Profile
 from profiles.serializers import ProfileSerializer
-
+from mycar_api.permisssions import IsOwnerOrReadOnly
 
 class ProfileList(generics.ListAPIView):
     """
@@ -16,7 +16,8 @@ class ProfileList(generics.ListAPIView):
 class ProfileDetail(generics.RetrieveUpdateAPIView):
     """
     Retrieve or update a profile
-    Allows update of the profile
+    Allows update of the profile if the user is the owner
     """
     serializer_class = ProfileSerializer
+    permission_classes = [IsOwnerOrReadOnly]
     queryset = Profile.objects.all()
