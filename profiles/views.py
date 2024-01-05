@@ -11,3 +11,11 @@ class ProfileList(generics.ListAPIView):
     """
     queryset = Profile.objects.all().order_by('-created_at')
     serializer_class = ProfileSerializer
+
+
+class ProfileDetail(generics.RetrieveUpdateAPIView):
+    """
+    Retrieve or update a profile
+    """
+    serializer_class = ProfileSerializer
+    queryset = Profile.objects.all()
