@@ -1,4 +1,5 @@
 from rest_framework import generics
+from profiles.models import Profile
 
 
 class ProfileList(generics.ListAPIView):
