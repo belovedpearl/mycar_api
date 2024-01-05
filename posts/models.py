@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-
 CAR_BODYTYPES = (
     ("Hatchbacks", "Hatchbacks"),
     ("Convertible", "Convertible"),
@@ -15,8 +14,7 @@ CAR_BODYTYPES = (
     ("Others", "Others"),
 )
 
-
-class Car(models.Model):
+class Post(models.Model):
     """
     Define the model post
     No default image set as user has to provide an image to male a post
@@ -40,3 +38,4 @@ class Car(models.Model):
 
     def __str__(self):
         return f'{self.id} {self.make} {self.model}'
+

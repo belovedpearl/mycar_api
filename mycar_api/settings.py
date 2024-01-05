@@ -56,7 +56,7 @@ INSTALLED_APPS = [
 
 
     'profiles',
-    'posts',
+    'posts'
 ]
 
 MIDDLEWARE = [
